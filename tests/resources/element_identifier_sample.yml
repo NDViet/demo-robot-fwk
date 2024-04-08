@@ -1,0 +1,5 @@
+practice_automation:
+  landing_page:
+    popups: //a[text()="Popups"]
+  popups:
+    prompt_btn: //button[@id="prompt"]
