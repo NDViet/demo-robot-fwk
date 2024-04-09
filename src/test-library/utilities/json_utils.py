@@ -23,7 +23,7 @@ class JsonUtils:
         except Exception as e:
             return False
 
-    @keyword()
+    @keyword
     def get_json_values(self, json_data, json_path):
         if not self.is_valid_jsonpath(json_path):
             raise ValueError(f"Invalid JSON path: {json_path}")

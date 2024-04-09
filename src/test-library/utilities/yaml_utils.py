@@ -2,6 +2,7 @@ import yaml
 from robot.api.deco import keyword
 
 class YamlUtils:
+    @keyword('convertYamlToDictionary')
     def load_yaml(self, yaml_string):
         try:
             return yaml.safe_load(yaml_string)
@@ -56,6 +57,7 @@ class YamlUtils:
         except Exception as e:
             print(f"An error occurred: {e}")
 
+    @keyword(name='createYamlFile')
     def write_yaml_to_file(self, yaml_data, file_path):
         try:
             yaml_data = self.load_yaml(yaml_data)
