@@ -1,6 +1,7 @@
 import yaml
 from robot.api.deco import keyword
 
+
 class YamlUtils:
     @keyword('convertYamlToDictionary')
     def load_yaml(self, yaml_string):

@@ -2,6 +2,7 @@ import json
 from jsonpath_ng import parse
 from robot.api.deco import keyword
 
+
 class JsonUtils:
 
     # Refer to: https://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html#dynamic-library-api

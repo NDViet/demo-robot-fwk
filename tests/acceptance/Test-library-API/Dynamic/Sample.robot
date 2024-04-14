@@ -1,5 +1,5 @@
 *** Settings ***
-Library    json_utils.JsonUtils
+Library    .json.JsonUtils
 Library    OperatingSystem
 
 *** Test Cases ***

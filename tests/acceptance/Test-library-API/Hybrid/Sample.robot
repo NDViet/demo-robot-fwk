@@ -1,5 +1,5 @@
 *** Settings ***
-Library    yaml_utils.YamlUtils
+Library    .yaml.YamlUtils
 Library    OperatingSystem
 
 *** Test Cases ***
