@@ -9,7 +9,7 @@ Verify that test library can be imported
     ${yaml}    Convert YAML To Dictionary    ${yamlString}
     ${editedYaml}    Edit Yaml Key    ${yaml}    practice_automation.popups.prompt_btn    //*[@id="this is new xpath"]
     Log    ${editedYaml}
-    ${outputFile}    Create YAML File    ${editedYaml}    ./target/output.yml
+    ${outputFile}    Create YAML File    ${editedYaml}    target/output.yml
     ${newValue}    Get Yaml Value    ${outputFile}    practice_automation.popups.prompt_btn
     Should Be Equal    ${newValue}    //*[@id="this is new xpath"]
     ${dictYaml}    Convert YAML To Dictionary    ${editedYaml}

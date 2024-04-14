@@ -1,5 +1,6 @@
 import yaml
 from robot.api.deco import keyword
+from files import FileUtils
 
 
 class YamlUtils:
@@ -12,6 +13,7 @@ class YamlUtils:
 
     def load_yaml_file(self, file_path):
         try:
+            file_path = FileUtils.normalize_path(file_path)
             with open(file_path, 'r') as file:
                 return yaml.safe_load(file)
         except FileNotFoundError:
@@ -22,6 +24,7 @@ class YamlUtils:
     @keyword
     def get_yaml_value(self, file_path, key_path):
         try:
+            file_path = FileUtils.normalize_path(file_path)
             yaml_data = self.load_yaml_file(file_path)
             value = self._traverse_yaml(yaml_data, key_path.split('.'))
             return value
@@ -51,6 +54,7 @@ class YamlUtils:
             print(f"Key '{key_path}' updated successfully with value '{new_value}'.")
 
             if output_file_path:
+                output_file_path = FileUtils.normalize_path(output_file_path)
                 return self.write_yaml_file(output_file_path, yaml_data)
             else:
                 print("Changes returned as YAML string.")
@@ -62,6 +66,7 @@ class YamlUtils:
     def write_yaml_to_file(self, yaml_data, file_path):
         try:
             yaml_data = self.load_yaml(yaml_data)
+            file_path = FileUtils.normalize_path(file_path)
             with open(file_path, 'w') as file:
                 yaml.dump(yaml_data, file)
             print(f"YAML data saved to '{file_path}'.")
