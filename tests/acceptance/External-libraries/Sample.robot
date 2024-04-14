@@ -1,5 +1,5 @@
 *** Settings ***
-Force Tags    session1
+Force Tags    session1    session2
 Library    SeleniumLibrary
 Library    OperatingSystem
 

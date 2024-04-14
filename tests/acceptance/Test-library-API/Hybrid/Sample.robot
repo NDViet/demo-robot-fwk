@@ -1,5 +1,5 @@
 *** Settings ***
-Library    .yaml.YamlUtils
+Library    ndviet_test_automation.demo.utilities.yaml.YamlUtils
 Library    OperatingSystem
 
 *** Test Cases ***

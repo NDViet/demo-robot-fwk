@@ -1,6 +1,6 @@
 *** Settings ***
 Force Tags    demo3
-Library    os_checks
+Library    ndviet_test_automation.demo.utilities.os_checks
 
 *** Test Cases ***
 Verify that test library can get OS name

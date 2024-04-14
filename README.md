@@ -45,7 +45,7 @@ robot --include demo2 --outputdir reports ./tests
 ### Demo3: Execute simple test using custom External Library is implemented by Python with static API
 
 ```Bash
-robot --include demo3 --outputdir reports --pythonpath src/test_library/utilities ./tests
+robot --include demo3 --outputdir reports ./tests
 ```
 
 _`--pythonpath` additional locations to add to the module search path_
@@ -57,7 +57,7 @@ pip install jsonpath_ng
 ```
 
 ```Bash
-robot --include demo4 --outputdir reports --pythonpath src/test_library/utilities ./tests
+robot --include demo4 --outputdir reports ./tests
 ```
 
 ### Demo5: Execute simple test using custom External Library is implemented by Python with hybrid API
@@ -67,11 +67,11 @@ pip install pyyaml
 ```
 
 ```Bash
-robot --include demo5 --outputdir reports --pythonpath src/test_library/utilities ./tests
+robot --include demo5 --outputdir reports ./tests
 ```
 
 ### Demo6: Execute all tests in previous demos in a single execution
 
 ```Bash
-robot --include session1 --outputdir reports --pythonpath src/test_library/utilities ./tests
+robot --include session2 --outputdir reports ./tests
 ```

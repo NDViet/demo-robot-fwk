@@ -1,5 +1,5 @@
 *** Settings ***
-Library    .json.JsonUtils
+Library    ndviet_test_automation.demo.utilities.json.JsonUtils
 Library    OperatingSystem
 
 *** Test Cases ***
