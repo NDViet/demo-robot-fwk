@@ -1,3 +1,24 @@
+<!-- TOC -->
+  * [Sessions](#sessions)
+  * [Install Python](#install-python)
+  * [Install common test library](#install-common-test-library)
+  * [Run tests](#run-tests)
+    * [Demo1: Execute simple test using Standard Library](#demo1-execute-simple-test-using-standard-library)
+    * [Demo2: Execute simple test using open-source External Library is installed by `pip`](#demo2-execute-simple-test-using-open-source-external-library-is-installed-by-pip)
+    * [Demo3: Execute simple test using custom External Library is implemented by Python with static API](#demo3-execute-simple-test-using-custom-external-library-is-implemented-by-python-with-static-api)
+    * [Demo4: Execute simple test using custom External Library is implemented by Python with dynamic API](#demo4-execute-simple-test-using-custom-external-library-is-implemented-by-python-with-dynamic-api)
+    * [Demo5: Execute simple test using custom External Library is implemented by Python with hybrid API](#demo5-execute-simple-test-using-custom-external-library-is-implemented-by-python-with-hybrid-api)
+    * [Demo6: Execute all tests in previous demos in a single execution](#demo6-execute-all-tests-in-previous-demos-in-a-single-execution)
+  * [Autoformatting Robot Framework code](#autoformatting-robot-framework-code)
+<!-- TOC -->
+
+## Sessions
+
+Switch branch to see contents of each session
+
+- [Session 1](../../tree/session1)
+- [Session 2](../../tree/session2)
+
 ## Install Python
 
 Following
@@ -80,10 +101,6 @@ You are able to use any IDE to work with Robot Framework code, while compose the
 format or indent consistent. `robotidy` is a tool to help you format the code once you have done.
 
 `robotidy` is tool for cleaning up and changing format of Robot Framework test data files
-
-```Bash
-pip install robotframework-tidy
-```
 
 Mandatory argument is the path to file or a directory to format. If a directory is given, all files inside it are
 processed recursively.
