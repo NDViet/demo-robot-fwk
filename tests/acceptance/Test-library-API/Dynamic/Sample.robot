@@ -1,10 +1,11 @@
 *** Settings ***
-Library    ndviet_test_automation.demo.utilities.json.JsonUtils
-Library    OperatingSystem
+Resource    ../../../library/utilities.robot
+Resource    ../../../library/builtin.robot
+
 
 *** Test Cases ***
 Verify that test library can be imported
-    [Tags]   demo4
+    [Tags]    demo4
     ${json}    Get File    tests/resources/sample.json
     Log    ${json}
     ${titles}    Get Json Values    ${json}    \$.store.book[*].title
@@ -12,4 +13,6 @@ Verify that test library can be imported
     ${title}    Get Json Value    ${json}    \$.store.book[*].title
     Log    ${title}
     ${isExist}    Run Keyword And Return Status    Keyword Should Exist    Is Valid Jsonpath
-    Should Be True    not ${isExist}    Keyword should not exist, since dynamic API filtering the named keyword should not be available
+    Should Be True
+    ...    not ${isExist}
+    ...    Keyword should not exist, since dynamic API filtering the named keyword should not be available

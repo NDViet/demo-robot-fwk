@@ -1,10 +1,11 @@
 *** Settings ***
-Library    ndviet_test_automation.demo.utilities.yaml.YamlUtils
-Library    OperatingSystem
+Resource    ../../../library/utilities.robot
+Resource    ../../../library/builtin.robot
+
 
 *** Test Cases ***
 Verify that test library can be imported
-    [Tags]   demo5
+    [Tags]    demo5
     ${yamlString}    Get File    tests/resources/element_identifier_sample.yml
     ${yaml}    Convert YAML To Dictionary    ${yamlString}
     ${editedYaml}    Edit Yaml Key    ${yaml}    practice_automation.popups.prompt_btn    //*[@id="this is new xpath"]

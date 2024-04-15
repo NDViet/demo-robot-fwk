@@ -1,6 +1,8 @@
 *** Settings ***
-Force Tags    demo3
-Library    ndviet_test_automation.demo.utilities.os_checks
+Resource        ../../../library/utilities.robot
+
+Force Tags      demo3
+
 
 *** Test Cases ***
 Verify that test library can get OS name

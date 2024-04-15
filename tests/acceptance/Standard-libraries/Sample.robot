@@ -1,8 +1,8 @@
 *** Settings ***
-Force Tags    session1    session2
-Library    OperatingSystem
-Library    String
-Library     DateTime
+Resource        ../../library/builtin.robot
+
+Force Tags      session1    session2
+
 
 *** Test Cases ***
 Verify that keywords in Standard Libraries are available
@@ -18,4 +18,4 @@ Verify that keywords in Standard Libraries are available
     Create File    ./target/output.json    ${contents}
     ${file_size}    Get File Size    ./target/output.json
     Should Be True    ${file_size} > 0
-    [TearDown]    Empty Directory    ./target
+    [Teardown]    Empty Directory    ./target

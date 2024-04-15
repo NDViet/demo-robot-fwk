@@ -1,12 +1,14 @@
 *** Settings ***
-Force Tags    session1    session2
-Library    SeleniumLibrary
-Library    OperatingSystem
+Resource        ../../library/builtin.robot
+Resource        ../../library/webui.robot
+
+Force Tags      session1    session2
+
 
 *** Test Cases ***
 Verify that web application could be access from Internet
     [Documentation]    Test is using external libraries
-    [Tags]    demo2   sanity
+    [Tags]    demo2    sanity
     [Setup]    Run Keywords    Create Directory    ./reports/screenshots
     ...    AND    Set Screenshot Directory    ./reports/screenshots
     ...    AND    Open Browser    url=https://practice-automation.com/    browser=chrome

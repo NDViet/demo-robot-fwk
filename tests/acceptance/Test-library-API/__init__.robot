@@ -1,2 +1,2 @@
 *** Settings ***
-Force Tags    session1    session2
+Force Tags      session1    session2
